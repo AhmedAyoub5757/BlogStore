@@ -1,18 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import a from '../../public/a.jpeg';
+import b from '../../public/b.jpg';
 
 // Dummy data for demonstration
 const posts = [
   {
     slug: 'first-post',
     title: 'First Post',
-    thumbnail: '/images/first-post.jpg',
+    thumbnail: a,
     excerpt: 'This is a short excerpt from the first post.',
   },
   {
     slug: 'second-post',
     title: 'Second Post',
-    thumbnail: '/images/second-post.jpg',
+    thumbnail: b,
     excerpt: 'This is a short excerpt from the second post.',
   },
 ];

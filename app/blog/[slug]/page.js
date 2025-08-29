@@ -4,8 +4,7 @@ import Link from 'next/link';
 export default function BlogPostPage({ params }) {
   const { slug } = params;
 
-  // Later you could fetch the actual post data here
-  // For now, we'll just use placeholder content
+  // Placeholder blog post data
   const post = {
     title: `Blog Post: ${slug}`,
     content: `This is a placeholder blog post for "${slug}". In a real app, you'd fetch the content from a database or markdown file.`,
@@ -14,17 +13,17 @@ export default function BlogPostPage({ params }) {
   };
 
   return (
-    <main className="max-w-3xl mx-auto px-6 py-12">
+    <main className="blog-post-page">
       {/* Title */}
-      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+      <h1 className="post-title">{post.title}</h1>
 
       {/* Meta info */}
-      <div className="text-gray-500 text-sm mb-8">
+      <div className="post-meta">
         <span>By {post.author}</span> · <span>{post.date}</span>
       </div>
 
       {/* Content */}
-      <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+      <article className="post-content">
         <p>{post.content}</p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut
@@ -34,13 +33,8 @@ export default function BlogPostPage({ params }) {
       </article>
 
       {/* Back link */}
-      <div className="mt-10">
-        <Link
-          href="/blog"
-          className="text-blue-600 hover:underline font-medium"
-        >
-          ← Back to Blog
-        </Link>
+      <div className="back-link">
+        <Link href="/blog">← Back to Blog</Link>
       </div>
     </main>
   );

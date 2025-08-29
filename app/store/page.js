@@ -24,7 +24,7 @@ export default function StorePage() {
               <Image
                 src={product.image}
                 alt={product.name}
-                fill
+                // fill
                 className="image"
               />
             </div>
